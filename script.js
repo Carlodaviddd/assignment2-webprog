@@ -31,7 +31,10 @@ async function getWeather(city) {
     lastUpdate.textContent = `Last Update: ${new Date().toLocaleTimeString()}`;
   } catch (error) {
     // console.error(error);
-    location.textContent = "Error fetching";
+    location.textContent = "City not found";
+    temperature.textContent = "";
+    description.textContent = "";
+    lastUpdate.textContent = "";
   }
 }
 
