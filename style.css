@@ -74,21 +74,6 @@ main,
   font-size: 1rem;
 }
 
-/* Search Button */
-#search-btn {
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background-color: #2088b8;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-#search-btn:hover {
-  background-color: #1a34c8;
-}
-
 /* Currency Converter labels and selects */
 label {
   display: block;
@@ -106,9 +91,15 @@ select {
 }
 
 /* Result paragraphs */
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
 #result p {
-  margin: 12px 0 0 0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
