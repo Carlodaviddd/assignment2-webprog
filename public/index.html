@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment 2 - API Services</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="page-break">
+        <div class="column">
+          <section id="weather-section">
+            <div class="weatherContainer">
+              <img
+                src="./img/weather-info.png"
+                alt="weather-info"
+                class="weatherInfo"
+              />
+              <h2>Weather</h2>
+              <div class="searchWeather">
+                <input
+                  type="text"
+                  id="city-input"
+                  placeholder="Enter city name"
+                  aria-label="City name"
+                />
+                <!-- <button id="search-btn">Search</button> -->
+              </div>
+              <p id="location">Calgary</p>
+              <p id="temperature">Test</p>
+              <p id="description">Test</p>
+              <p id="last-update">Test</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column: Currency Converter -->
+        <div class="column">
+          <section id="currency-section">
+            <div class="currencyContainer">
+              <img
+                src="./img/currency-exchange.png"
+                alt="currency-exchange"
+                class="currencyExchange"
+              />
+              <h2>Currency Converter</h2>
+
+              <label for="from-currency">From:</label>
+              <select id="from-currency"></select>
+
+              <label for="to-currency">To:</label>
+              <select id="to-currency"></select>
+
+              <div id="result">
+                <p>Exchange Rate: <span id="exchange-rate"></span></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
