@@ -3,23 +3,23 @@ html {
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #47d5ce, #2980b9);
+  background: #34b0aa;
   color: #fff;
 }
 
 main,
 .page-break {
-  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-}
-
-.page-break {
-  width: 100%;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .column {
-  width: 50%;
+  flex: 1 1 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,16 +31,17 @@ main,
 .weatherContainer,
 .currencyContainer {
   background: rgba(111, 195, 197, 0.7);
-  padding: 30px 40px;
+  padding: 2rem;
   border-radius: 15px;
   width: 400px;
-  height: 400px;
+  height: auto;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .weatherContainer h2,
 .currencyContainer h2 {
-  text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   font-size: 1.8rem;
 }
@@ -48,56 +49,48 @@ main,
 /* Weather search */
 .searchWeather {
   display: flex;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 20px;
 }
 
 .weatherContainer p {
-  text-align: center;
   font-size: 1.2rem;
-  margin: 8px 0;
+  margin: 0.5rem 0;
   font-weight: 600;
 }
 
 #location {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   color: blanchedalmond;
 }
 
 #city-input {
   flex-grow: 1;
-  padding: 8px 12px;
+  padding: 0.5rem 0.75rem;
   border-radius: 8px;
   border: none;
   font-size: 1rem;
+  min-width: 150px;
 }
 
 /* Currency Converter labels and selects */
 label {
   display: block;
-  margin-top: 15px;
+  margin-top: 1rem;
   font-weight: 600;
 }
 
-select {
-  width: 100%;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: none;
-  margin-top: 6px;
-  font-size: 1rem;
-}
-
+select,
 #amount {
-  flex-grow: 1;
-  padding: 8px 12px;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
   border-radius: 8px;
   border: none;
+  margin-top: 0.5rem;
   font-size: 1rem;
-  width: 100%;
-  max-width: 375px;
 }
 
 /* Result paragraphs */
@@ -111,13 +104,74 @@ select {
 #result p {
   font-size: 1.4rem;
   font-weight: 600;
-  margin: 30px;
+  margin: 1.5rem 0;
 }
 
 /* Weather and Currency image */
 .currencyExchange,
 .weatherInfo {
   display: block;
-  margin: 0 auto 20px auto;
-  max-width: 100px;
+  margin: 0 auto 1rem auto;
+  max-width: 80px;
+  width: 20%;
+  height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 550px) {
+  main,
+  .page-break {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weatherContainer,
+  .currencyContainer {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .weatherContainer h2,
+  .currencyContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  #location {
+    font-size: 2rem;
+  }
+
+  .weatherContainer p,
+  #result p {
+    font-size: 1rem;
+  }
+
+  #city-input,
+  #amount,
+  select {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .searchWeather {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .currencyExchange,
+  .weatherInfo {
+    max-width: 60px;
+    width: 20%;
+    height: auto;
+  }
 }
